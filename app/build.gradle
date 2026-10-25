@@ -9,8 +9,8 @@ File localPropertiesFile = project.rootProject.file("local.properties")
 if (localPropertiesFile.exists()) {
     properties.load(new FileInputStream(localPropertiesFile))
 }
-def learnerApiKey = properties.getProperty("MERRIAM_WEBSTER_LEARNER_API_KEY", "79967426-216c-4723-9552-0200afa66e58")
-def thesaurusApiKey = properties.getProperty("MERRIAM_WEBSTER_THESAURUS_API_KEY", "79967426-216c-4723-9552-0200afa66e58")
+def learnerApiKey = properties.getProperty("MERRIAM_WEBSTER_LEARNER_API_KEY", "")
+def thesaurusApiKey = properties.getProperty("MERRIAM_WEBSTER_THESAURUS_API_KEY", "")
 
 android {
     namespace 'com.wordspark.app'
