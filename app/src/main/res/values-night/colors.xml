@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Dark-mode overrides for high contrast and crystal-clear visibility.
+      Because themes.xml and every layout reference these same color names,
+      switching AppCompatDelegate's night mode re-themes the whole app
+      automatically - no per-screen dark-mode logic needed.
+    -->
+    <color name="primary">#34A885</color>
+    <color name="primary_dark">#1E634F</color>
+    <color name="primary_light">#1E3F35</color>
+    <color name="accent">#34A885</color>
+
+    <color name="background">#121212</color>
+    <color name="surface">#1E1E1E</color>
+    <color name="input_bg">#262626</color>
+
+    <color name="text_primary">#F3F4F6</color>
+    <color name="text_secondary">#9CA3AF</color>
+    <color name="text_hint">#6B7280</color>
+
+    <color name="divider">#2A2A2A</color>
+    <color name="error">#E74C3C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="icon_bg_on_card">#2A2A2A</color>
+</resources>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WordSpark</string>
+    <string name="splash_subtitle">Build your vocabulary</string>
+
+    <!-- Auth -->
+    <string name="create_account">Create Account</string>
+    <string name="register_subtitle">Sign up to start saving words and tracking progress.</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login_subtitle">Log in to continue building your vocabulary.</string>
+    <string name="label_name">NAME</string>
+    <string name="label_email">EMAIL</string>
+    <string name="label_password">PASSWORD</string>
+    <string name="label_confirm_password">CONFIRM PASSWORD</string>
+    <string name="hint_name">Your full name</string>
+    <string name="hint_email">you@example.com</string>
+    <string name="action_register">Register</string>
+    <string name="action_login">Login</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="show_password">Show password</string>
+    <string name="hide_password">Hide password</string>
+    <string name="show_confirm_password">Show confirm password</string>
+    <string name="hide_confirm_password">Hide confirm password</string>
+
+    <!-- Forgot Password -->
+    <string name="reset_password_title">Reset Password</string>
+    <string name="reset_password_subtitle">Choose a new password for %1$s.</string>
+    <string name="reset_new_password_subtitle">Enter your new password below.</string>
+    <string name="action_continue">Continue</string>
+    <string name="label_new_password">NEW PASSWORD</string>
+    <string name="label_confirm_new_password">CONFIRM NEW PASSWORD</string>
+    <string name="cd_toggle_password">Toggle password visibility</string>
+    <string name="action_reset_password">Reset Password</string>
+    <string name="back_to_login">Back to Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="err_email_not_registered">No account found with this email address.</string>
+    <string name="err_password_reset_failed">We couldn\'t update your password. Please try again.</string>
+    <string name="password_reset_success">Password updated. Please log in with your new password.</string>
+
+    <!-- Vocab Lists -->
+    <string name="vocabulary_lists">Vocabulary Lists</string>
+    <string name="vocab_lists_subtitle">Master curated lists of high-impact words</string>
+    <string name="tap_to_reveal">Tap card to reveal meaning</string>
+    <string name="definition_unavailable_offline">Definition unavailable offline</string>
+    <string name="card_progress_format">Card %1$d of %2$d</string>
+    <string name="previous">Previous</string>
+    <string name="save_word">Save Word</string>
+    <string name="saved">Saved</string>
+    <string name="cd_back">Back</string>
+
+    <!-- Errors -->
+    <string name="err_required_field">This field is required.</string>
+    <string name="err_invalid_email">Please enter a valid email address.</string>
+    <string name="err_password_short">Password must be at least 8 characters.</string>
+    <string name="err_password_mismatch">Passwords do not match.</string>
+    <string name="err_account_exists">Account already exists.</string>
+    <string name="err_invalid_login">Invalid email or password.</string>
+    <string name="err_empty_search">Please enter a word.</string>
+    <string name="err_word_not_found">Word not found. Please check the spelling and try again.</string>
+    <string name="err_no_internet">Unable to load definition. Please check your internet connection.</string>
+    <string name="err_audio_playback">Couldn\'t play pronunciation. Please try again.</string>
+    <string name="err_api_failure">Unable to load definition. Please check your internet connection.</string>
+    <string name="err_login_required">Please login or register to continue.</string>
+    <string name="err_generic_try_again">Something went wrong. Please try again.</string>
+
+    <!-- Home -->
+    <string name="search_hint">Search for a word…</string>
+    <string name="word_of_the_day">WORD OF THE DAY</string>
+    <string name="view_details">View Details</string>
+    <string name="saved_words">Saved Words</string>
+    <string name="history">History</string>
+    <string name="quiz">Quiz</string>
+    <string name="explore_words">Explore Words</string>
+    <string name="wotd_error">Today\'s Word of the Day could not be loaded.</string>
+    <string name="greeting_morning">Good morning, %1$s!</string>
+    <string name="greeting_afternoon">Good afternoon, %1$s!</string>
+    <string name="greeting_evening">Good evening, %1$s!</string>
+    <string name="stats_favorites">Favorites</string>
+    <string name="stats_words_searched">Words in History</string>
+    <string name="stats_quiz_best">Quiz Best Score</string>
+
+    <!-- Search -->
+    <string name="search_title">Search</string>
+    <string name="recent_searches">Recent Searches</string>
+    <string name="suggested_words">Suggested Words</string>
+    <string name="cd_voice_search">Voice Search</string>
+    <string name="try_these_words">Try These Words</string>
+    <string name="voice_prompt">Say a word to search</string>
+    <string name="voice_permission_title">Microphone Permission Required</string>
+    <string name="voice_permission_rationale">WordSpark needs access to your microphone to let you search words by voice.</string>
+    <string name="voice_permission_settings_hint">Microphone permission was denied. Please enable it in app settings to use voice search.</string>
+    <string name="voice_permission_denied">Microphone permission denied.</string>
+    <string name="err_voice_unavailable">Voice search isn\'t available on this device.</string>
+    <string name="err_voice_no_speech">We didn\'t catch that. Tap the mic and try again.</string>
+    <string name="err_voice_network">Voice recognition needs an internet connection. Please check your connection.</string>
+    <string name="err_voice_audio">There was a problem with the microphone. Please try again.</string>
+    <string name="err_voice_failed">Voice recognition failed. Please try again or type your search.</string>
+    <string name="allow">Allow</string>
+    <string name="not_now">Not Now</string>
+    <string name="open_settings">Open Settings</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Word Details -->
+    <string name="synonyms">Synonyms</string>
+    <string name="antonyms">Antonyms</string>
+    <string name="read_definition_aloud">Read Definition Aloud</string>
+    <string name="stop_reading">Stop Reading</string>
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="remove_from_favorites">Remove from Favorites</string>
+    <string name="added_to_favorites">Added to Saved Words</string>
+    <string name="removed_from_favorites">Removed from Saved Words</string>
+    <string name="err_tts_unavailable">Voice output isn\'t available on this device.</string>
+    <string name="err_tts_not_ready">Voice output is still getting ready. Please try again in a moment.</string>
+    <string name="err_tts_failed">Couldn\'t read this aloud. Please try again.</string>
+
+    <!-- Favorites / History -->
+    <string name="empty_favorites">No favorite words yet.</string>
+    <string name="empty_history">No search history yet.</string>
+    <string name="clear_history">Clear History</string>
+    <string name="clear_history_confirm">Clear your entire search history? This cannot be undone.</string>
+    <string name="history_cleared">Search history cleared.</string>
+    <string name="err_clear_history_failed">Could not clear history. Please try again.</string>
+
+    <!-- Quiz -->
+    <string name="quiz_complete_title">🎉 Quiz Complete!</string>
+    <string name="try_again">Try Again</string>
+    <string name="back_to_home">Back to Home</string>
+    <string name="next">Next →</string>
+    <string name="see_results">See Results</string>
+    <string name="exit_quiz_title">Exit Quiz?</string>
+    <string name="exit_quiz_message">Your current progress will be lost.</string>
+    <string name="exit">Exit</string>
+    <string name="correct_label">✓ Correct!</string>
+    <string name="incorrect_label">✗ Incorrect</string>
+    <string name="correct_answer_prefix">Correct answer:</string>
+    <string name="best_score_format">🏆 Best Score: %1$d / %2$d</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="theme">Theme</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_system">System Default</string>
+    <string name="history_limit">History Limit</string>
+    <string name="reminder_time">Reminder Time</string>
+    <string name="clear_search_history">Clear Search History</string>
+    <string name="notification_wotd_title">WordSpark — Word of the Day</string>
+    <string name="notification_wotd_word">Today\'s word: %1$s</string>
+    <string name="about_wordspark">About WordSpark</string>
+    <string name="logout">Logout</string>
+    <string name="logout_confirm">Are you sure you want to log out? Your saved words and history will still be here when you sign back in.</string>
+    <string name="notif_permission_denied">Notification permission is required to receive daily reminders.</string>
+    <string name="entries_format">%1$d entries</string>
+    <string name="history_limit_updated">History limit set to %1$d entries</string>
+    <string name="notif_enabled_toast">Daily reminder set for %1$s</string>
+    <string name="notif_disabled_toast">Daily reminder turned off</string>
+
+    <!-- generic -->
+    <string name="back">Back</string>
+    <string name="cd_play_pronunciation">Play pronunciation</string>
+    <string name="ok">OK</string>
+    <string name="retry">Retry</string>
+    <string name="did_you_mean">Did you mean:</string>
+    <string name="hint_search_favorites">Search saved words...</string>
+    <string name="sort_recent">Sort: Recent</string>
+    <string name="sort_az">Sort: A-Z</string>
+    <string name="cd_settings">Settings</string>
+    <string name="cd_notifications">Notifications</string>
+    <string name="cd_remove_favorite">Remove favorite</string>
+    <string name="cd_chevron">Navigate</string>
+    <string name="cd_nav_home">Home tab</string>
+    <string name="cd_nav_history">History tab</string>
+    <string name="cd_nav_saved">Saved words tab</string>
+    <string name="cd_nav_quiz">Quiz tab</string>
+    <string name="cd_logo">WordSpark logo</string>
+    <string name="cd_clear_search">Clear search</string>
+
+    <!-- Settings (Phase 2) -->
+    <string name="section_appearance">APPEARANCE</string>
+    <string name="section_history">HISTORY</string>
+    <string name="section_notifications">NOTIFICATIONS</string>
+    <string name="section_account">ACCOUNT</string>
+    <string name="section_about">ABOUT</string>
+    <string name="wotd_notification">Word of the Day</string>
+    <string name="wotd_notification_desc">Get a daily reminder to learn a new word</string>
+
+</resources>
