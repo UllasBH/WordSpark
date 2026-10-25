@@ -22,11 +22,11 @@ The main idea behind the project is to provide a simple, clean interface where u
 
 ## Recent Improvements
 
-- **Spelling Suggestions**: Displays clickable suggestion chips when an exact word match is not found.
-- **Rich Word Details**: Parses and displays word forms/inflections, usage/domain labels (e.g., informal, technical), and etymology.
-- **Favorites Management**: Added real-time search filtering and sorting (Recent vs. A–Z) within saved words.
-- **Learning Progress Tracking**: Records quiz attempts, correct answers, best scores, and flashcard review counts in SQLite settings.
-- **Offline Caching**: Successfully fetched dictionary responses are cached in local SQLite (`TABLE_DICTIONARY`) to allow previously viewed words to be accessed offline.
+- **Spelling Suggestions:** Displays clickable suggestion chips when an exact word match is not found.
+- **Rich Word Details:** Parses and displays word forms/inflections, usage/domain labels (e.g., informal, technical), and etymology.
+- **Favorites Management:** Added real-time search filtering and sorting (Recent vs. A–Z) within saved words.
+- **Learning Progress Tracking:** Records quiz attempts, correct answers, best scores, and flashcard review counts in SQLite settings.
+- **Offline Caching:** Successfully fetched dictionary responses are cached in local SQLite (`TABLE_DICTIONARY`) to allow previously viewed words to be accessed offline.
 
 ## Technologies Used
 
@@ -43,7 +43,7 @@ The main idea behind the project is to provide a simple, clean interface where u
 
 When a user searches for a word, WordSpark sends a request to the Merriam-Webster API and parses the JSON response to display the available dictionary information.
 
-Dictionary data is fetched online when needed rather than storing a complete English dictionary locally inside the application. However, successfully fetched dictionary responses are cached in local SQLite so previously viewed words remain accessible offline.
+Dictionary data is fetched online when needed rather than storing a complete English dictionary locally inside the application. Successfully fetched dictionary responses are cached in local SQLite so previously viewed words remain accessible offline.
 
 User-specific data—such as user accounts, saved favorites, search history, progress statistics, and application settings—is stored locally using SQLite.
 
@@ -86,6 +86,7 @@ Displays a selected Word of the Day on the Home screen with daily notification r
 ## Local Storage
 
 SQLite is used for local data persistence:
+
 - User accounts and authentication state
 - Favorites / Saved words
 - Search history
@@ -97,12 +98,18 @@ The application does not store a complete offline dictionary.
 ## API Configuration
 
 WordSpark uses two Merriam-Webster APIs:
-1. **Merriam-Webster Learner's Dictionary API**: Definitions, pronunciations, parts of speech, inflections, usage labels, etymology, and examples.
-2. **Merriam-Webster Thesaurus API**: Synonyms and antonyms.
 
-API keys are kept out of source control and configured locally in `local.properties`, which injects them into `BuildConfig`.
+1. **Merriam-Webster Learner's Dictionary API:** Definitions, pronunciations, parts of speech, inflections, usage labels, etymology, and examples.
+2. **Merriam-Webster Thesaurus API:** Synonyms and antonyms.
 
-**Do not commit API keys to Git.**
+API keys should be configured locally in `local.properties` and must never be committed to source control.
+
+Example configuration:
+
+```properties
+MERRIAM_WEBSTER_LEARNER_API_KEY=your_learner_api_key_here
+MERRIAM_WEBSTER_THESAURUS_API_KEY=your_thesaurus_api_key_here
+```
 
 ## Requirements
 
@@ -116,28 +123,25 @@ API keys are kept out of source control and configured locally in `local.propert
 1. Clone or download the repository.
 2. Open the project folder in Android Studio.
 3. Allow Gradle to sync.
-4. Add your Merriam-Webster API keys to `local.properties`:
-   ```properties
-   MERRIAM_WEBSTER_LEARNER_API_KEY=your_learner_api_key_here
-   MERRIAM_WEBSTER_THESAURUS_API_KEY=your_thesaurus_api_key_here
-   ```
+4. Add your Merriam-Webster API keys to `local.properties` using the example above.
 5. Build the project.
 6. Run the app on an Android device or emulator.
 
 ## Testing & Build Commands
 
-- **Unit Tests**: Run `./gradlew testDebugUnitTest` via Gradle.
-- **Debug Build**: Run `./gradlew assembleDebug` via Gradle.
-- **Debug APK Output Path**: `app/build/outputs/apk/debug/app-debug.apk` (or `app/build/outputs/apk/release/app-release-unsigned.apk` for release).
+- **Unit tests:** Run `./gradlew testDebugUnitTest` via Gradle.
+- **Debug build:** Run `./gradlew assembleDebug` via Gradle.
+- **Debug APK output:** `app/build/outputs/apk/debug/app-debug.apk` (or `app/build/outputs/apk/release/app-release-unsigned.apk` for release).
 
 ## Accessibility
 
 WordSpark incorporates static accessibility improvements aligned with Android best practices and WCAG 2.2 AA guidelines:
-- **Touch Targets**: Interactive controls maintain minimum bounding sizes of 48×48 dp with padding.
-- **Contrast Ratios**: Foreground and background color combinations meet WCAG AA contrast thresholds (>= 4.5:1 for normal text, >= 3:1 for large text) in both Light and Dark modes.
-- **Semantic Descriptions**: Informative icons have descriptive content descriptions while decorative graphics are excluded from accessibility traversal.
-- **Text Resizing & Reflow**: Uses scalable units (`sp`/`dp`) and vertical `ScrollView` containers to support text scaling up to 200% and narrow viewports without content clipping.
-- **Runtime Verification Note**: Live TalkBack screen reader navigation, hardware keyboard focus visibility, largest-font behavior, narrow-screen reflow, and dynamic status announcements require runtime device/emulator verification and are not claimed as fully verified via static checks. Certified WCAG 2.2 AA conformance is not claimed.
+
+- **Touch targets:** Interactive controls maintain minimum bounding sizes of 48×48 dp with padding.
+- **Contrast ratios:** Foreground and background color combinations target WCAG AA contrast thresholds (at least 4.5:1 for normal text and 3:1 for large text) in both Light and Dark modes.
+- **Semantic descriptions:** Informative icons have descriptive content descriptions while decorative graphics are excluded from accessibility traversal.
+- **Text resizing and reflow:** Uses scalable units (`sp`/`dp`) and vertical `ScrollView` containers to support text scaling and narrow viewports without content clipping.
+- **Runtime verification:** Live TalkBack navigation, hardware keyboard focus visibility, largest-font behavior, narrow-screen reflow, and dynamic status announcements require runtime device/emulator verification. Certified WCAG 2.2 AA conformance is not claimed.
 
 ## Project Structure
 
@@ -154,7 +158,6 @@ app/
         │   ├── quiz/
         │   ├── util/
         │   └── vocab/
-        │
         └── res/
             ├── drawable/
             ├── layout/
@@ -171,20 +174,16 @@ app/
 
 ## Notes
 
-- Dictionary information depends entirely on the response provided by the Merriam-Webster API.
+- Dictionary information depends on the response provided by the Merriam-Webster API.
 - Some fields (such as audio, synonyms, or examples) may not be available for every word.
 - Fresh dictionary lookups require an active internet connection. Previously cached words may be viewed offline when present in the local database cache.
-- All user account data, favorites, search history, and settings are stored locally on the device using SQLite.
+- User accounts, favorites, search history, and settings are stored locally on the device using SQLite.
 
 ## Team Members
 
-WordSpark was developed as a team project as part of the
-Mobile Application Development Lab.
+WordSpark was developed as a team project as part of the Mobile Application Development Lab.
 
 - Priya Nayak
 - Shetty Shiny Prashanth
 - Abdul Majeed
 - Ullas BH
-=======
-WordSpark is a Java-based Android dictionary application developed as a Mobile Application Development (MAD) course project. It features word search, dictionary API integration, Word of the Day, and vocabulary learning features. Developed collaboratively by a team of four students using Android Studio.
->>>>>>> origin/main
