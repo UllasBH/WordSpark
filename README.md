@@ -187,3 +187,14 @@ WordSpark was developed as a team project as part of the Mobile Application Deve
 - Shetty Shiny Prashanth
 - Abdul Majeed
 - Ullas BH
+
+## WordSpark – Module Division
+
+The project work was divided among the four team members as follows:
+
+| Team Member | Assigned Modules |
+|---|---|
+| **Priya Nayak** | User Account, Settings, Word of the Day |
+| **Shetty Shiny Prashanth** | Search, Word Detail |
+| **Abdul Majeed** | Favorites, History |
+| **Ullas BH** | Vocabulary Lists, Flashcards, Quiz |
