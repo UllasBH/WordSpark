@@ -1,34 +1,51 @@
-# Built application files
+
+# Android build files
 *.apk
 *.aab
 *.ap_
-
-# Files for the Dalvik VM
 *.dex
-
-# Java class files
 *.class
-
-# Generated files
 bin/
 gen/
 out/
 build/
 app/build/
+output-metadata.json
 
-# Gradle files
+# Gradle
 .gradle/
 gradle-app.setting
+.kotlin/
 !gradle/wrapper/gradle-wrapper.properties
 
-# Local configuration file (sdk path, API keys)
+# Local configuration
 local.properties
 
-# Idea project files
+# Android Studio and IntelliJ
 .idea/
 *.iml
-.DS_Store
 .navigation/
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+
+# Native build files
+.externalNativeBuild/
+.cxx/
+
+# Logs and temporary files
 captures/
-.externalNativeBuild
-.cxx
+*.log
+*.hprof
+
+# Signing credentials
+*.jks
+*.keystore
+
+# Environment files
+.env
+.env.*
+
+# Operating system files
+.DS_Store
+Thumbs.db
